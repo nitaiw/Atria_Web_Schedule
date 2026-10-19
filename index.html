@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class Timetable – Atria Wellness Club</title>
+<!-- Test page only. On the Daisho site the theme already loads Gotham, so only the block between the START/END markers is used. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fff; }
+  .test-wrap { max-width: 1280px; margin: 0 auto; padding: 56px 24px 80px; }
+  @media (max-width: 600px) { .test-wrap { padding: 32px 16px 56px; } }
+</style>
+</head>
+<body>
+<div class="test-wrap">
+
+<!-- ATRIA TIMETABLE START — paste everything from here to the END marker into a Custom HTML block -->
+<div id="atria-tt" class="atria-tt" aria-live="polite">
+  <div class="att-head">
+    <div>
+      <h2 class="att-title"><svg class="att-logo" viewBox="0 0 501.88 170.08" fill="currentColor" role="img" aria-label="ATRIA Wellness Club"><path d="M52.01,0h12.07l52.01,114.95h-13.86l-13.37-30.16H26.74l-13.53,30.16H0L52.01,0ZM83.81,73.05L57.88,15l-26.09,58.05h52.01ZM152.29,12.72h-38.32V.82h89.68v11.9h-38.32v102.23h-13.04V12.72ZM228.03.82h49.08c14.02,0,25.27,4.24,32.45,11.41,5.54,5.54,8.8,13.53,8.8,22.5v.33c0,18.91-13.04,30-30.98,33.26l35.06,46.63h-15.82l-33.1-44.35h-32.61v44.35h-12.88V.82ZM276.54,59.03c17.12,0,29.35-8.8,29.35-23.48v-.33c0-14.02-10.76-22.5-29.19-22.5h-35.22v46.31h35.06ZM350.76.82h12.88v114.14h-12.88V.82ZM437.8,0h12.07l52.01,114.95h-13.86l-13.37-30.16h-62.12l-13.53,30.16h-13.21L437.8,0ZM469.6,73.05l-25.93-58.05-26.09,58.05h52.01ZM57.88,145.12h4.66l5.85,18.19,6.03-18.26h3.65l6.03,18.26,5.85-18.19h4.52l-8.52,24.71h-3.75l-6.03-17.63-6.03,17.63h-3.72l-8.55-24.71ZM105.63,145.12h18.19v3.86h-13.88v6.38h12.3v3.86h-12.3v6.59h14.06v3.86h-18.37v-24.54ZM136.55,145.12h4.31v20.61h12.9v3.93h-17.21v-24.54ZM164.98,145.12h4.31v20.61h12.9v3.93h-17.21v-24.54ZM192.48,145.12h4l13.15,16.97v-16.97h4.24v24.54h-3.61l-13.53-17.46v17.46h-4.24v-24.54ZM227.14,145.12h18.19v3.86h-13.88v6.38h12.3v3.86h-12.3v6.59h14.06v3.86h-18.37v-24.54ZM255.71,166.08l2.59-3.09c2.35,2.03,4.73,3.19,7.75,3.19,2.66,0,4.35-1.26,4.35-3.09v-.07c0-1.75-.98-2.7-5.54-3.75-5.22-1.26-8.17-2.8-8.17-7.33v-.07c0-4.21,3.51-7.12,8.38-7.12,3.58,0,6.42,1.09,8.9,3.08l-2.31,3.26c-2.21-1.65-4.42-2.52-6.66-2.52-2.52,0-4,1.3-4,2.91v.07c0,1.89,1.12,2.73,5.85,3.86,5.19,1.26,7.85,3.12,7.85,7.19v.07c0,4.59-3.61,7.33-8.76,7.33-3.75,0-7.29-1.3-10.24-3.93ZM284.53,166.08l2.59-3.09c2.35,2.03,4.73,3.19,7.75,3.19,2.66,0,4.35-1.26,4.35-3.09v-.07c0-1.75-.98-2.7-5.54-3.75-5.22-1.26-8.17-2.8-8.17-7.33v-.07c0-4.21,3.51-7.12,8.38-7.12,3.58,0,6.42,1.09,8.9,3.08l-2.31,3.26c-2.21-1.65-4.42-2.52-6.66-2.52-2.52,0-4,1.3-4,2.91v.07c0,1.89,1.12,2.73,5.85,3.86,5.19,1.26,7.85,3.12,7.85,7.19v.07c0,4.59-3.61,7.33-8.76,7.33-3.75,0-7.29-1.3-10.24-3.93ZM328.55,157.46v-.07c0-6.98,5.22-12.69,12.66-12.69,4.52,0,7.26,1.58,9.61,3.82l-2.77,3.19c-1.96-1.82-4.07-3.05-6.87-3.05-4.66,0-8.1,3.86-8.1,8.66v.07c0,4.8,3.4,8.69,8.1,8.69,3.02,0,4.94-1.19,7.05-3.16l2.77,2.8c-2.56,2.66-5.36,4.35-9.96,4.35-7.15,0-12.48-5.57-12.48-12.62ZM362.47,145.12h4.31v20.61h12.9v3.93h-17.21v-24.54ZM389.12,159.25v-14.13h4.31v13.95c0,4.56,2.35,6.98,6.21,6.98s6.17-2.28,6.17-6.8v-14.13h4.31v13.92c0,7.33-4.14,11.01-10.55,11.01s-10.45-3.68-10.45-10.8ZM423.23,145.12h11.01c2.8,0,5.01.77,6.42,2.17,1.09,1.09,1.65,2.42,1.65,4.07v.07c0,2.94-1.68,4.52-3.51,5.47,2.87.98,4.87,2.63,4.87,5.96v.07c0,4.38-3.61,6.73-9.08,6.73h-11.36v-24.54ZM437.99,152.06c0-1.93-1.54-3.12-4.31-3.12h-6.21v6.52h5.89c2.77,0,4.63-1.09,4.63-3.33v-.07ZM434.31,159.11h-6.84v6.73h7.15c2.94,0,4.73-1.16,4.73-3.37v-.07c0-2.07-1.65-3.3-5.05-3.3Z"/></svg></h2>
+      <div class="att-sub">
+        <span>180–192 Ann Street, Brisbane</span>
+        <span class="att-open" id="att-open" style="display:none"></span>
+      </div>
+    </div>
+    <a class="att-book" id="att-book" href="#" target="_blank" rel="noopener">Book a class</a>
+  </div>
+
+  <div class="att-filters" id="att-filters" role="group" aria-label="Filter by class type"></div>
+  <div class="att-tabs" id="att-tabs" role="tablist" aria-label="Choose a day"></div>
+
+  <div class="att-body" id="att-body"><div class="att-note">Loading the timetable…</div></div>
+
+  <div class="att-hours" id="att-hours" style="display:none"></div>
+
+  <div class="att-foot">
+    <span id="att-status"></span>
+    <span>Times are Brisbane time. Spots update every few minutes. Book and join waitlists in the ATRIA app.</span>
+  </div>
+</div>
+
+<style>
+#atria-tt {
+  --att-ink: #000;
+  --att-ink-2: rgba(0,0,0,0.62);
+  --att-line: rgba(0,0,0,0.14);
+  --att-soft: #f5f5f5;
+  --att-accent: #9a5b2e;          /* only for "few spots left" */
+  container-type: inline-size;
+  color: var(--att-ink);
+  font-family: "Gotham", "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px; line-height: 1.35; letter-spacing: 0.01em; text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+#atria-tt *, #atria-tt *::before, #atria-tt *::after { box-sizing: border-box; }
+#atria-tt button { font: inherit; color: inherit; background: none; border: 0; margin: 0; padding: 0; cursor: pointer; text-transform: none; letter-spacing: inherit; }
+#atria-tt button:focus-visible, #atria-tt a:focus-visible { outline: 2px solid var(--att-ink); outline-offset: 2px; }
+
+/* Header */
+#atria-tt .att-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap;
+  padding-bottom: 24px; border-bottom: 1px solid var(--att-ink); }
+#atria-tt .att-title { margin: 0; line-height: 0; color: var(--att-ink); }
+#atria-tt .att-logo { display: block; height: 44px; width: auto; }
+#atria-tt .att-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin-top: 12px; font-size: 13px; color: var(--att-ink-2); }
+#atria-tt .att-book { display: inline-block; padding: 13px 26px; border: 1px solid var(--att-ink); color: var(--att-ink); text-decoration: none;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; transition: background .2s, color .2s; }
+#atria-tt .att-book:hover { background: var(--att-ink); color: #fff; }
+
+/* Filters */
+#atria-tt .att-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+#atria-tt .att-chip { padding: 8px 14px; border: 1px solid var(--att-line); border-radius: 999px; font-size: 13px; white-space: nowrap; transition: border-color .2s; }
+#atria-tt .att-chip:hover { border-color: var(--att-ink); }
+#atria-tt .att-chip[aria-pressed="true"] { background: var(--att-ink); border-color: var(--att-ink); color: #fff; }
+
+/* Day tabs (narrow layouts only) */
+#atria-tt .att-tabs { display: flex; gap: 6px; margin: 20px -2px 0; padding: 2px; overflow-x: auto; scrollbar-width: none; }
+#atria-tt .att-tabs::-webkit-scrollbar { display: none; }
+#atria-tt .att-tab { flex: 1 0 64px; padding: 10px 4px; border: 1px solid var(--att-line); text-align: center; }
+#atria-tt .att-tab .d1 { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; }
+#atria-tt .att-tab .d2 { display: block; margin-top: 4px; font-size: 18px; }
+#atria-tt .att-tab.empty { color: rgba(0,0,0,0.38); }
+#atria-tt .att-tab[aria-selected="true"] { background: var(--att-ink); border-color: var(--att-ink); color: #fff; }
+
+/* Day list (narrow) */
+#atria-tt .att-day-h { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 28px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--att-line); }
+#atria-tt .att-day-t { font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
+#atria-tt .att-day-n { font-size: 13px; color: var(--att-ink-2); white-space: nowrap; }
+#atria-tt .att-list { list-style: none; margin: 0; padding: 0; }
+#atria-tt .att-row { display: grid; grid-template-columns: 84px minmax(0,1fr) auto; gap: 16px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--att-line); }
+#atria-tt .att-time { font-size: 15px; font-weight: 500; white-space: nowrap; }
+#atria-tt .att-len { margin-top: 3px; font-size: 13px; color: var(--att-ink-2); }
+#atria-tt .att-name { font-size: 16px; font-weight: 500; }
+#atria-tt .att-meta { margin-top: 3px; font-size: 13px; color: var(--att-ink-2); }
+#atria-tt .att-spots { font-size: 13px; text-align: right; white-space: nowrap; color: var(--att-ink-2); padding-top: 2px; }
+#atria-tt .att-spots.low { color: var(--att-accent); font-weight: 600; }
+#atria-tt .att-spots.full { color: var(--att-ink); font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; font-size: 11px; padding-top: 4px; }
+#atria-tt .att-badge { display: inline-block; margin-left: 8px; padding: 2px 7px; background: var(--att-ink); color: #fff; font-size: 10px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase; vertical-align: 2px; }
+#atria-tt .past { opacity: 0.4; }
+#atria-tt .att-note { padding: 40px 0; color: var(--att-ink-2); font-size: 15px; }
+#atria-tt .att-note strong { display: block; color: var(--att-ink); font-weight: 500; margin-bottom: 6px; }
+#atria-tt .att-note a { color: var(--att-ink); }
+
+/* Week grid (wide) */
+#atria-tt .att-week { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 0; margin-top: 24px; border-left: 1px solid var(--att-line); }
+#atria-tt .att-col { border-right: 1px solid var(--att-line); min-width: 0; }
+#atria-tt .att-col-h { padding: 12px 12px 14px; border-bottom: 1px solid var(--att-line); position: sticky; top: 0; background: #fff; z-index: 1; }
+#atria-tt .att-col-h .d1 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; }
+#atria-tt .att-col-h .d2 { margin-top: 4px; font-size: 20px; }
+#atria-tt .att-col.today .att-col-h { background: var(--att-ink); color: #fff; }
+/* Every card has the same fixed lines, so cards are one height and the grid reads evenly:
+   time · name (up to 2 lines) · instructor · room · spots. Anything longer is cut with "…" (full text in the tooltip). */
+#atria-tt .att-card { padding: 12px; border-bottom: 1px solid var(--att-line); }
+#atria-tt .att-card > div { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#atria-tt .att-card .att-time { height: 18px; line-height: 18px; font-size: 13px; }
+#atria-tt .att-card .att-time .att-len { display: inline; margin-left: 4px; font-size: 12px; font-weight: 400; }
+#atria-tt .att-card .att-name { margin-top: 4px; height: 36px; font-size: 14px; line-height: 18px; white-space: normal;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+#atria-tt .att-card .att-meta { margin-top: 2px; height: 16px; font-size: 12px; line-height: 16px; }
+#atria-tt .att-card .att-spots { margin-top: 6px; height: 16px; line-height: 16px; text-align: left; font-size: 12px; padding: 0; }
+#atria-tt .att-card .att-spots.full { font-size: 10px; }
+#atria-tt .att-card .att-badge { margin: 0; vertical-align: 1px; }
+#atria-tt .att-col .att-none { padding: 14px 12px; font-size: 12px; color: rgba(0,0,0,0.42); }
+
+/* Opening hours: open/closed line in the header, hours under each day, the week's hours below the timetable */
+#atria-tt .att-open { display: flex; align-items: center; gap: 8px; font-weight: 500; color: var(--att-ink); }
+#atria-tt .att-open::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--att-ink); }
+#atria-tt .att-open.shut { color: var(--att-ink-2); }
+#atria-tt .att-open.shut::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--att-ink-2); }
+#atria-tt .att-open.soon { color: var(--att-accent); }
+#atria-tt .att-open.soon::before { background: var(--att-accent); }
+#atria-tt .att-col-h .d3 { margin-top: 6px; height: 15px; font-size: 11px; line-height: 15px; color: var(--att-ink-2);
+  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+#atria-tt .att-col.today .att-col-h .d3 { color: rgba(255,255,255,0.75); }
+#atria-tt .att-col-h .d3.x { color: var(--att-accent); font-weight: 600; }
+#atria-tt .att-col.today .att-col-h .d3.x { color: #fff; }
+#atria-tt .att-col.shut { background: var(--att-soft); }
+#atria-tt .att-col.shut .att-none { color: var(--att-ink); }
+#atria-tt .att-tab.shut .d2 { text-decoration: line-through; }
+#atria-tt .att-day-hrs { margin-top: 10px; font-size: 13px; color: var(--att-ink-2); }
+#atria-tt .att-day-hrs.x { color: var(--att-accent); font-weight: 600; }
+#atria-tt .att-hours { display: flex; flex-wrap: wrap; gap: 24px 72px; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--att-ink); }
+#atria-tt .att-h-label { font-size: 12px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+#atria-tt .att-h-grid { display: grid; grid-template-columns: max-content max-content; gap: 6px 32px; font-size: 14px; }
+#atria-tt .att-h-grid .d { font-weight: 500; }
+#atria-tt .att-h-grid .x { color: var(--att-accent); font-weight: 600; }
+
+/* Footer */
+#atria-tt .att-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; margin-top: 20px; font-size: 12px; color: var(--att-ink-2); }
+
+/* Switch layouts on the timetable's own width, so it works in any column the theme gives it */
+#atria-tt .att-week { display: none; }
+@container (min-width: 960px) {
+  #atria-tt .att-tabs, #atria-tt .att-daylist { display: none; }
+  #atria-tt .att-week { display: grid; }
+}
+@container (max-width: 420px) {
+  #atria-tt .att-row { grid-template-columns: 68px minmax(0,1fr); gap: 4px 14px; }
+  #atria-tt .att-row .att-spots { grid-column: 2; text-align: left; padding-top: 0; }
+  #atria-tt .att-logo { height: 36px; }
+  #atria-tt .att-book { width: 100%; text-align: center; }
+  #atria-tt .att-filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: -16px; padding-right: 16px; }
+  #atria-tt .att-filters::-webkit-scrollbar { display: none; }
+  #atria-tt .att-tabs { gap: 4px; }
+  #atria-tt .att-tab { flex: 1 0 40px; padding: 8px 2px; }
+  #atria-tt .att-tab .d1 { font-size: 10px; letter-spacing: 0.1em; }
+  #atria-tt .att-tab .d2 { font-size: 16px; }
+}
+</style>
+
+<script>
+(function () {
+  /* ═════════ Config ═════════ */
+  var WORKER_URL   = 'https://atria-timetable-proxy.nitai-whitehurst.workers.dev';
+  var BOOK_URL     = 'https://atriawellnessclub.perfectgym.com.au/clientportal2/';
+  var CONTACT      = 'info@atriawellnessclub.com.au';
+  var CACHE_KEY    = 'atria-web-timetable-v1';
+  var REFRESH_MINS = 5;
+  var LOW_SPOTS    = 5;
+  var DAYS         = 7;            /* today plus the next six days */
+  var CACHE_MAX_H  = 12;
+
+  var root = document.getElementById('atria-tt');
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = '1';
+  var $ = function (id) { return document.getElementById(id); };
+  var Q = new URLSearchParams(location.search);
+  $('att-book').href = BOOK_URL;
+
+  /* ═════════ Time (Brisbane is a fixed UTC+10, no daylight saving) ═════════ */
+  var TZ = 'Australia/Brisbane', DAY = 86400000, OFF = 10 * 3600000;
+  var midnight = function (t) { return Math.floor((t + OFF) / DAY) * DAY - OFF; };
+  var fmtTime = function (t) { return new Date(t).toLocaleTimeString('en-AU', { timeZone: TZ, hour: 'numeric', minute: '2-digit', hour12: true }).replace(/\s+/g, ' ').toUpperCase(); };
+  var fmtWd   = function (t, style) { return new Date(t).toLocaleDateString('en-AU', { timeZone: TZ, weekday: style }); };
+  var fmtDate = function (t) { return new Date(t).toLocaleDateString('en-AU', { timeZone: TZ, day: 'numeric' }); };
+  var fmtLong = function (t) { return new Date(t).toLocaleDateString('en-AU', { timeZone: TZ, weekday: 'long', day: 'numeric', month: 'long' }); };
+  var fmtAbbr = function (t) { return new Date(t).toLocaleDateString('en-AU', { timeZone: TZ, weekday: 'short', day: 'numeric', month: 'short' }); };
+  function dur(c) { var m = Math.round((c.end - c.start) / 60000), h = Math.floor(m / 60), r = m % 60; return h ? (r ? h + ' h ' + r + ' min' : h + ' h') : m + ' min'; }
+
+  var ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ESC[c]; }); };
+
+  /* ═════════ Class types (same keyword rules as the club screen) ═════════ */
+  var CAT_RULES = [
+    ['Reformer', /reformer/i], ['Boxing', /strike|box/i], ['Barre', /barre/i], ['Yoga', /yoga|sound healing/i],
+    ['Stretch', /melt|stretch/i], ['Pilates', /pilates|ignite|\bhp\b|\bmat\b|thrive/i],
+    ['Strength & HIIT', /lift|hiit|kettlebell|bells|latin|zumba|run club|core|breakfast club/i], ['Events', /tour|talk|activation|vibe/i]
+  ];
+  var CAT_EXACT = { 'HB Lunch': 'Pilates', 'HBB Lunch': 'Barre' };
+  var HIDE = /^no classes|instructor training/i;
+  function category(name) {
+    if (CAT_EXACT[name]) return CAT_EXACT[name];
+    for (var i = 0; i < CAT_RULES.length; i++) if (CAT_RULES[i][1].test(name)) return CAT_RULES[i][0];
+    return 'Other';
+  }
+
+  /* Only what the page shows. Instructors appear as first name + initial on the public site. */
+  function clean(list) {
+    return (Array.isArray(list) ? list : []).filter(function (c) {
+      return c && c.classType && typeof c.classType.name === 'string' && c.isDeleted !== true && !HIDE.test(c.classType.name)
+        && !isNaN(Date.parse(c.startDate)) && !isNaN(Date.parse(c.endDate));
+    }).map(function (c) {
+      var name = c.classType.name.replace(/\s+/g, ' ').trim(), i = c.instructor || {};
+      var instr = ((i.firstName || '') + (i.lastName ? ' ' + i.lastName.trim()[0] + '.' : '')).trim();
+      var zone = c.clubZone ? (c.clubZone.name || c.clubZone.shortName || '') : '';
+      var limit = +c.attendeesLimit || 0, left = Math.max(0, limit - (+c.attendeesCount || 0));
+      return { start: Date.parse(c.startDate), end: Date.parse(c.endDate), name: name, cat: category(name),
+        instr: instr, zone: zone.replace(/\s+(zone|area)$/i, ''), limit: limit, left: left };
+    }).sort(function (a, b) { return a.start - b.start || a.name.localeCompare(b.name); });
+  }
+
+  /* ═════════ Opening hours ═════════ */
+  /* From the worker as { week: [{ day 0–6 (Sun = 0), open, close (minutes from midnight), closed, allDay }],
+     except: [{ from, until ('YYYY-MM-DD', Brisbane, both included), open, close, closed }] }. Missing or bad: no hours are shown. */
+  var WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var dateKey = function (d) { return new Date(d + OFF).toISOString().slice(0, 10); };   /* d = a Brisbane midnight */
+  var okMin = function (v) { return typeof v === 'number' && v >= 0 && v <= 1440; };
+  function cleanHours(h) {
+    if (!h || typeof h !== 'object' || !Array.isArray(h.week)) return null;
+    var slot = function (x, o) {
+      o.closed = !!x.closed; o.allDay = !!x.allDay || (x.open === 0 && x.close === 1440);
+      o.open = okMin(x.open) ? x.open : null; o.close = okMin(x.close) ? x.close : null;
+      return o;
+    };
+    var usable = function (x) { return x.closed || x.allDay || (x.open !== null && x.close !== null); };
+    var isDate = function (v) { return /^\d{4}-\d\d-\d\d$/.test(v); };
+    var week = h.week.filter(function (x) { return x && x.day >= 0 && x.day <= 6; })
+      .map(function (x) { return slot(x, { day: x.day }); }).filter(usable);
+    var except = (Array.isArray(h.except) ? h.except : []).filter(function (x) { return x && isDate(x.from) && isDate(x.until); })
+      .map(function (x) { return slot(x, { from: x.from, until: x.until }); }).filter(usable);
+    return week.length ? { week: week, except: except } : null;
+  }
+  /* Hours for the Brisbane day starting at d: a date exception (holiday, short day) wins over the weekly hours */
+  function hoursOn(h, d) {
+    if (!h) return null;
+    var k = dateKey(d), i, x;
+    for (i = 0; i < h.except.length; i++) { x = h.except[i]; if (x.from <= k && k <= x.until) return { closed: x.closed, allDay: x.allDay, open: x.open, close: x.close, special: true }; }
+    var wd = new Date(d + OFF).getUTCDay();
+    for (i = 0; i < h.week.length; i++) { x = h.week[i]; if (x.day === wd) return { closed: x.closed, allDay: x.allDay, open: x.open, close: x.close, special: false }; }
+    return null;
+  }
+  var hm = function (t) { return fmtTime(t).replace(':00 ', ' '); };   /* 8 PM, 5:30 AM */
+  var closeMin = function (s) { return s.close > s.open ? s.close : 1440; };
+  function slotText(s, d) {
+    return !s ? '' : s.closed ? 'Closed' : s.allDay ? 'Open 24 hours' : hm(d + s.open * 60000) + ' – ' + hm(d + closeMin(s) * 60000);
+  }
+  /* Header line: open now (until when, amber in the last hour), or closed and when it next opens */
+  function openLine(h, now) {
+    var today = midnight(now), t = hoursOn(h, today), i, d, s;
+    if (!t) return null;
+    if (!t.closed) {
+      if (t.allDay) return { cls: '', text: 'Open 24 hours today' };
+      var open = today + t.open * 60000, close = today + closeMin(t) * 60000;
+      if (now >= open && now < close) return close - now <= 3600000
+        ? { cls: 'soon', text: 'Closing soon · closes ' + hm(close) } : { cls: '', text: 'Open now · until ' + hm(close) };
+      if (now < open) return { cls: 'shut', text: 'Closed · opens today at ' + hm(open) };
+    }
+    for (i = 1; i <= 7; i++) {
+      d = today + i * DAY; s = hoursOn(h, d);
+      if (s && !s.closed) {
+        var when = i === 1 ? 'tomorrow' : fmtWd(d, 'long');
+        return { cls: 'shut', text: 'Closed · opens ' + when + (s.allDay ? '' : ' at ' + hm(d + s.open * 60000)) };
+      }
+    }
+    return { cls: 'shut', text: 'Closed' };
+  }
+  /* Below the timetable: the usual week, grouped into runs of days with the same hours, and any holiday or short day in the shown week */
+  function hoursHTML(h, ds) {
+    var rows = [], cell = function (a, b, x) { return '<div class="d' + (x ? ' x' : '') + '">' + esc(a) + '</div><div' + (x ? ' class="x"' : '') + '>' + esc(b) + '</div>'; };
+    [1, 2, 3, 4, 5, 6, 0].forEach(function (wd) {
+      var s = null;
+      h.week.forEach(function (x) { if (x.day === wd) s = x; });
+      var t = slotText(s, ds[0]) || '–', last = rows[rows.length - 1];
+      if (last && last.t === t) last.to = wd; else rows.push({ from: wd, to: wd, t: t });
+    });
+    var html = '<div><div class="att-h-label">Opening hours</div><div class="att-h-grid">' + rows.map(function (r) {
+      return cell(r.from === r.to ? WD[r.from] : WD[r.from] + ' – ' + WD[r.to], r.t);
+    }).join('') + '</div></div>';
+    var special = ds.map(function (d) { var s = hoursOn(h, d); return s && s.special ? cell(fmtAbbr(d), slotText(s, d), true) : ''; }).join('');
+    if (special) html += '<div><div class="att-h-label">Changed hours this week</div><div class="att-h-grid">' + special + '</div></div>';
+    return html;
+  }
+
+  /* ═════════ State ═════════ */
+  var hours = null;
+  var classes = [], status = 'loading', savedAt = 0, filter = 'All', selDay = null;
+
+  function readCache() {
+    try {
+      var o = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (o && Date.now() - o.at < CACHE_MAX_H * 3600000 && Array.isArray(o.list)) return o;   /* o.hours: raw hours, may be missing */
+    } catch (_) {}
+    return null;
+  }
+  function writeCache(list, hrs, at) { try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: at, list: list, hours: hrs })); } catch (_) {} }
+
+  function load() {
+    clearTimeout(load.t);
+    if (Q.get('demo') === '1') { classes = demo(); hours = demoHours(); status = 'demo'; savedAt = Date.now(); render(); return; }
+    var ctl = typeof AbortController === 'function' ? new AbortController() : null;
+    var to = setTimeout(function () { if (ctl) ctl.abort(); }, 12000);
+    fetch(WORKER_URL, ctl ? { cache: 'no-store', signal: ctl.signal } : { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || !Array.isArray(d.value)) throw new Error('Unexpected reply');
+        classes = clean(d.value); hours = cleanHours(d.hours); savedAt = Date.now(); status = 'live';
+        writeCache(d.value, d.hours || null, savedAt);
+      })
+      .catch(function (e) {
+        if (window.console) console.warn('Atria timetable:', e);
+        if (status !== 'live') {
+          var c = readCache();
+          if (c) { classes = clean(c.list); hours = cleanHours(c.hours); savedAt = c.at; status = 'cache'; } else status = 'error';
+        } else status = 'cache';
+      })
+      .then(function () { clearTimeout(to); render(); schedule(); });
+  }
+  function schedule() { clearTimeout(load.t); load.t = setTimeout(load, (status === 'error' ? 1 : REFRESH_MINS) * 60000); }
+  /* Don't poll in a background tab; refresh straight away when the visitor comes back to a stale page */
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') clearTimeout(load.t);
+    else if (Date.now() - savedAt > REFRESH_MINS * 60000) load(); else schedule();
+  });
+
+  /* ═════════ Render ═════════ */
+  function days(now) {
+    var d0 = midnight(now), out = [];
+    for (var i = 0; i < DAYS; i++) out.push(d0 + i * DAY);
+    return out;
+  }
+  function spotsHTML(c, now) {
+    if (c.end <= now) return '';
+    if (c.limit === 0) return '<div class="att-spots">Open</div>';
+    if (c.left === 0) return '<div class="att-spots full">Full</div>';
+    return '<div class="att-spots' + (c.left <= LOW_SPOTS ? ' low' : '') + '">' + c.left + ' spot' + (c.left === 1 ? '' : 's') + ' left</div>';
+  }
+  function metaText(c) { return [c.instr, c.zone].filter(Boolean).map(esc).join(' · '); }
+  function badge(c, now) { return now >= c.start && now < c.end ? '<span class="att-badge">On now</span>' : ''; }
+
+  function render() {
+    var now = Date.now(), ds = days(now);
+    if (status === 'error') {
+      $('att-filters').innerHTML = ''; $('att-tabs').innerHTML = '';
+      $('att-body').innerHTML = '<div class="att-note"><strong>The timetable isn’t available right now.</strong>'
+        + 'Please check the ATRIA app, or email <a href="mailto:' + CONTACT + '">' + CONTACT + '</a>.</div>';
+      $('att-status').textContent = '';
+      $('att-open').style.display = 'none'; $('att-hours').style.display = 'none';
+      return;
+    }
+    /* Opening hours (nothing shows when the feed has none) */
+    var ol = hours && openLine(hours, now), dh = ds.map(function (d) { return hoursOn(hours, d); });
+    $('att-open').style.display = ol ? '' : 'none';
+    if (ol) { $('att-open').className = 'att-open' + (ol.cls ? ' ' + ol.cls : ''); $('att-open').textContent = ol.text; }
+    $('att-hours').style.display = hours ? '' : 'none';
+    if (hours) $('att-hours').innerHTML = hoursHTML(hours, ds);
+    var shut = function (i) { return !!(dh[i] && dh[i].closed); };
+    var dayHrs = function (i) { return dh[i] ? (dh[i].closed ? 'Club closed' : slotText(dh[i], ds[i])) : ''; };
+
+    var inRange = classes.filter(function (c) { return c.start >= ds[0] && c.start < ds[0] + DAYS * DAY; });
+
+    /* Filter chips: only types that are on this week */
+    var cats = ['All'];
+    CAT_RULES.map(function (r) { return r[0]; }).concat('Other').forEach(function (k) {
+      if (inRange.some(function (c) { return c.cat === k; })) cats.push(k);
+    });
+    if (cats.indexOf(filter) < 0) filter = 'All';
+    $('att-filters').innerHTML = cats.map(function (k) {
+      return '<button type="button" class="att-chip" data-cat="' + esc(k) + '" aria-pressed="' + (k === filter) + '">' + esc(k) + '</button>';
+    }).join('');
+
+    var shown = inRange.filter(function (c) { return filter === 'All' || c.cat === filter; });
+    var byDay = ds.map(function (d) { return shown.filter(function (c) { return midnight(c.start) === d; }); });
+
+    /* Default day: the first day with a class still to come (today, or e.g. Monday when viewed on a Sunday) */
+    if (selDay === null || ds.indexOf(selDay) < 0) {
+      var i0 = byDay.findIndex(function (l) { return l.some(function (c) { return c.end > now; }); });
+      selDay = ds[Math.max(0, i0)];
+    }
+
+    $('att-tabs').innerHTML = ds.map(function (d, i) {
+      var sel = d === selDay;
+      return '<button type="button" role="tab" class="att-tab' + (byDay[i].length ? '' : ' empty') + (shut(i) ? ' shut' : '') + '" data-day="' + d + '" aria-selected="' + sel + '" tabindex="' + (sel ? 0 : -1) + '"'
+        + ' aria-label="' + esc(fmtLong(d)) + ', ' + (byDay[i].length || 'no') + (byDay[i].length === 1 ? ' class' : ' classes') + (shut(i) ? ', club closed">' : '">')
+        + '<span class="d1">' + (i === 0 ? 'Today' : esc(fmtWd(d, 'short'))) + '</span><span class="d2">' + esc(fmtDate(d)) + '</span></button>';
+    }).join('');
+
+    /* Narrow: one day as a list */
+    var si = ds.indexOf(selDay), list = byDay[si];
+    var dayLabel = (si === 0 ? 'Today · ' : si === 1 ? 'Tomorrow · ' : '') + fmtLong(selDay);
+    var daylist = '<div class="att-daylist" role="tabpanel"><div class="att-day-h"><span class="att-day-t">' + esc(dayLabel) + '</span>'
+      + '<span class="att-day-n">' + (list.length ? list.length + (list.length === 1 ? ' class' : ' classes') : '') + '</span></div>';
+    if (dh[si]) daylist += '<div class="att-day-hrs' + (dh[si].special ? ' x' : '') + '">'
+      + (dh[si].closed ? 'The club is closed this day' : 'Club open ' + esc(slotText(dh[si], selDay))) + '</div>';
+    daylist += list.length ? '<ul class="att-list">' + list.map(function (c) {
+      return '<li class="att-row' + (c.end <= now ? ' past' : '') + '">'
+        + '<div><div class="att-time">' + fmtTime(c.start) + '</div><div class="att-len">' + dur(c) + '</div></div>'
+        + '<div><div class="att-name">' + esc(c.name) + badge(c, now) + '</div><div class="att-meta">' + metaText(c) + '</div></div>'
+        + spotsHTML(c, now) + '</li>';
+    }).join('') + '</ul>'
+      : '<div class="att-note">' + (shut(si) ? 'No classes.' : filter === 'All' ? 'No classes on this day.' : 'No ' + esc(filter) + ' classes on this day.') + '</div>';
+    daylist += '</div>';
+
+    /* Wide: the whole week as columns */
+    var week = '<div class="att-week">' + ds.map(function (d, i) {
+      return '<section class="att-col' + (i === 0 ? ' today' : '') + (shut(i) ? ' shut' : '') + '" aria-label="' + esc(fmtLong(d)) + (shut(i) ? ', club closed' : '') + '">'
+        + '<div class="att-col-h"><div class="d1">' + (i === 0 ? 'Today' : esc(fmtWd(d, 'short'))) + '</div><div class="d2">' + esc(fmtDate(d)) + '</div>'
+        + (hours ? '<div class="d3' + (dh[i] && dh[i].special ? ' x' : '') + '">' + esc(dayHrs(i)) + '</div>' : '') + '</div>'
+        + (byDay[i].length ? byDay[i].map(function (c) {
+          return '<div class="att-card' + (c.end <= now ? ' past' : '') + '">'
+            + '<div class="att-time">' + fmtTime(c.start) + '<span class="att-len">· ' + dur(c) + '</span></div>'
+            + '<div class="att-name" title="' + esc(c.name) + '">' + esc(c.name) + '</div>'
+            + '<div class="att-meta">' + esc(c.instr) + '</div><div class="att-meta" title="' + esc(c.zone) + '">' + esc(c.zone) + '</div>'
+            + (badge(c, now) ? '<div class="att-spots">' + badge(c, now) + '</div>' : spotsHTML(c, now) || '<div class="att-spots"></div>') + '</div>';
+        }).join('') : '<div class="att-none">' + (shut(i) ? 'Club closed' : 'No classes') + '</div>')
+        + '</section>';
+    }).join('') + '</div>';
+
+    $('att-body').innerHTML = daylist + week;
+    $('att-status').textContent = status === 'demo' ? 'Sample data – not the live timetable'
+      : (status === 'cache' ? 'Couldn’t refresh · showing the timetable from ' : 'Updated ') + fmtTime(savedAt);
+  }
+
+  /* ═════════ Interaction ═════════ */
+  root.addEventListener('click', function (e) {
+    var chip = e.target.closest('.att-chip'), tab = e.target.closest('.att-tab');
+    if (chip) { filter = chip.getAttribute('data-cat'); selDay = null; render(); }   /* jump to the first day with that type */
+    if (tab) { selDay = +tab.getAttribute('data-day'); render(); var t = root.querySelector('.att-tab[aria-selected="true"]'); if (t) t.focus(); }
+  });
+  $('att-tabs').addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var tabs = [].slice.call(root.querySelectorAll('.att-tab')), i = tabs.indexOf(document.activeElement);
+    if (i < 0) return;
+    e.preventDefault();
+    tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length].click();
+  });
+  /* Keep "On now" and past classes right as time passes, between fetches */
+  setInterval(function () { if (document.visibilityState !== 'hidden' && status !== 'loading') render(); }, 60000);
+
+  /* ═════════ Sample week for ?demo=1 ═════════ */
+  function demo() {
+    var d0 = midnight(Date.now()), out = [];
+    var plan = [['Reformer Pilates', 6, 0, 50, 'Reformer Studio', 14, 13], ['Hot Power Yoga (heated)', 6, 30, 60, 'Group Fitness Studio', 20, 9],
+      ['Strike Club', 12, 15, 45, 'Boxing Studio', 12, 12], ['Lift Hiit', 12, 30, 45, 'Functional Training Zone', 16, 4],
+      ['Melt (warm heat)', 17, 30, 45, 'Group Fitness Studio', 18, 6], ['Hot Barre (heated)', 18, 15, 50, 'Group Fitness Studio', 20, 20]];
+    for (var i = 0; i < DAYS; i++) {
+      var wd = new Date(d0 + i * DAY + OFF).getUTCDay();
+      if (wd === 0 || wd === 6 || i === 4) continue;   /* no classes on the sample holiday (see demoHours) */
+      plan.forEach(function (p, k) {
+        if ((i + k) % 5 === 4) return;
+        var s = d0 + i * DAY + (p[1] * 60 + p[2]) * 60000;
+        out.push({ startDate: new Date(s).toISOString(), endDate: new Date(s + p[3] * 60000).toISOString(), isDeleted: false,
+          classType: { name: p[0] }, instructor: { firstName: 'Instructor', lastName: '' }, clubZone: { name: p[4] }, attendeesLimit: p[5], attendeesCount: Math.max(0, p[6] - i) });
+      });
+    }
+    return clean(out);
+  }
+
+  /* Sample hours: 5:30 AM – 8 PM weekdays, 7 AM – 2 PM weekends, and a holiday closure in four days' time */
+  function demoHours() {
+    var hol = dateKey(midnight(Date.now()) + 4 * DAY);
+    return cleanHours({ week: [0, 1, 2, 3, 4, 5, 6].map(function (d) { return d % 6 ? { day: d, open: 330, close: 1200 } : { day: d, open: 420, close: 840 }; }),
+      except: [{ from: hol, until: hol, closed: true }] });
+  }
+
+  var boot = readCache();
+  if (boot && Q.get('demo') !== '1') { classes = clean(boot.list); hours = cleanHours(boot.hours); savedAt = boot.at; status = 'cache'; render(); status = 'loading'; }
+  load();
+})();
+</script>
+<!-- ATRIA TIMETABLE END -->
+
+</div>
+</body>
+</html>
