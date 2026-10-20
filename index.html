@@ -38,7 +38,7 @@
 
   <div class="att-foot">
     <span id="att-status"></span>
-    <span>Times are Brisbane time. Spots update every few minutes. Book and join waitlists in the ATRIA app.</span>
+    <span>Times are Brisbane time. Bookings update every few minutes. Book and join waitlists in the ATRIA app.</span>
   </div>
 </div>
 
@@ -212,6 +212,7 @@
   ];
   var CAT_EXACT = { 'HB Lunch': 'Pilates', 'HBB Lunch': 'Barre' };
   var HIDE = /^no classes|instructor training/i;
+  var FREE = /\bfree\b/i;      /* the worker sends no price for a class, so free classes are the ones named e.g. "MELT (Free)" */
   function category(name) {
     if (CAT_EXACT[name]) return CAT_EXACT[name];
     for (var i = 0; i < CAT_RULES.length; i++) if (CAT_RULES[i][1].test(name)) return CAT_RULES[i][0];
@@ -227,9 +228,9 @@
       var name = c.classType.name.replace(/\s+/g, ' ').trim(), i = c.instructor || {};
       var instr = ((i.firstName || '') + (i.lastName ? ' ' + i.lastName.trim()[0] + '.' : '')).trim();
       var zone = c.clubZone ? (c.clubZone.name || c.clubZone.shortName || '') : '';
-      var limit = +c.attendeesLimit || 0, left = Math.max(0, limit - (+c.attendeesCount || 0));
-      return { start: Date.parse(c.startDate), end: Date.parse(c.endDate), name: name, cat: category(name),
-        instr: instr, zone: zone.replace(/\s+(zone|area)$/i, ''), limit: limit, left: left };
+      var limit = +c.attendeesLimit || 0, booked = Math.min(limit, Math.max(0, +c.attendeesCount || 0));
+      return { start: Date.parse(c.startDate), end: Date.parse(c.endDate), name: name, cat: category(name), free: FREE.test(name),
+        instr: instr, zone: zone.replace(/\s+(zone|area)$/i, ''), limit: limit, booked: booked, left: limit - booked };
     }).sort(function (a, b) { return a.start - b.start || a.name.localeCompare(b.name); });
   }
 
@@ -355,8 +356,9 @@
   function spotsHTML(c, now) {
     if (c.end <= now) return '';
     if (c.limit === 0) return '<div class="att-spots">Open</div>';
-    if (c.left === 0) return '<div class="att-spots full">Full</div>';
-    return '<div class="att-spots' + (c.left <= LOW_SPOTS ? ' low' : '') + '">' + c.left + ' spot' + (c.left === 1 ? '' : 's') + ' left</div>';
+    if (c.left === 0) return '<div class="att-spots full">Full · Waitlist</div>';
+    return '<div class="att-spots' + (c.left <= LOW_SPOTS ? ' low' : '') + '" title="' + c.left + (c.left === 1 ? ' spot' : ' spots') + ' left">'
+      + c.booked + '/' + c.limit + ' booked</div>';
   }
   function metaText(c) { return [c.instr, c.zone].filter(Boolean).map(esc).join(' · '); }
   function badge(c, now) { return now >= c.start && now < c.end ? '<span class="att-badge">On now</span>' : ''; }
@@ -387,12 +389,13 @@
     CAT_RULES.map(function (r) { return r[0]; }).concat('Other').forEach(function (k) {
       if (inRange.some(function (c) { return c.cat === k; })) cats.push(k);
     });
+    if (inRange.some(function (c) { return c.free; })) cats.push('Free');   /* not a type: any class with "Free" in its name */
     if (cats.indexOf(filter) < 0) filter = 'All';
     $('att-filters').innerHTML = cats.map(function (k) {
       return '<button type="button" class="att-chip" data-cat="' + esc(k) + '" aria-pressed="' + (k === filter) + '">' + esc(k) + '</button>';
     }).join('');
 
-    var shown = inRange.filter(function (c) { return filter === 'All' || c.cat === filter; });
+    var shown = inRange.filter(function (c) { return filter === 'All' || (filter === 'Free' ? c.free : c.cat === filter); });
     var byDay = ds.map(function (d) { return shown.filter(function (c) { return midnight(c.start) === d; }); });
 
     /* Default day: the first day with a class still to come (today, or e.g. Monday when viewed on a Sunday) */
@@ -421,7 +424,7 @@
         + '<div><div class="att-name">' + esc(c.name) + badge(c, now) + '</div><div class="att-meta">' + metaText(c) + '</div></div>'
         + spotsHTML(c, now) + '</li>';
     }).join('') + '</ul>'
-      : '<div class="att-note">' + (shut(si) ? 'No classes.' : filter === 'All' ? 'No classes on this day.' : 'No ' + esc(filter) + ' classes on this day.') + '</div>';
+      : '<div class="att-note">' + (shut(si) ? 'No classes.' : filter === 'All' ? 'No classes on this day.' : 'No ' + esc(filter === 'Free' ? 'free' : filter) + ' classes on this day.') + '</div>';
     daylist += '</div>';
 
     /* Wide: the whole week as columns */
@@ -465,7 +468,7 @@
     var d0 = midnight(Date.now()), out = [];
     var plan = [['Reformer Pilates', 6, 0, 50, 'Reformer Studio', 14, 13], ['Hot Power Yoga (heated)', 6, 30, 60, 'Group Fitness Studio', 20, 9],
       ['Strike Club', 12, 15, 45, 'Boxing Studio', 12, 12], ['Lift Hiit', 12, 30, 45, 'Functional Training Zone', 16, 4],
-      ['Melt (warm heat)', 17, 30, 45, 'Group Fitness Studio', 18, 6], ['Hot Barre (heated)', 18, 15, 50, 'Group Fitness Studio', 20, 20]];
+      ['Melt (warm heat)', 17, 30, 45, 'Group Fitness Studio', 18, 6], ['Hot Barre (heated)', 18, 15, 50, 'Group Fitness Studio', 20, 20], ['Run Club (Free)', 7, 0, 45, 'Foyer', 20, 8]];
     for (var i = 0; i < DAYS; i++) {
       var wd = new Date(d0 + i * DAY + OFF).getUTCDay();
       if (wd === 0 || wd === 6 || i === 4) continue;   /* no classes on the sample holiday (see demoHours) */
